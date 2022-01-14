@@ -32,12 +32,12 @@ namespace Ruan_Twitter_Quote
                 "Only one thing can heal the heart, and that is love.",
                 "Weak people wants revenge, while strong people will forgive",
                 "The fool wonders, while wize men asks.",
-                "Every end marks a new beginning",
+                "Every end marks a new beginning.",
                 "Don't let other define your fate."
             };
 
             TwitterClient myUserClient = new TwitterClient(consumer_key, consumer_secret, access_token, access_secret);
-            var tweet = await myUserClient.Tweets.PublishTweetAsync(new PublishTweetParameters(RuanHappyQuotes[RandNum.Next(5)] + " #RuanQuotes"));
+            var tweet = await myUserClient.Tweets.PublishTweetAsync(new PublishTweetParameters(RuanHappyQuotes[RandNum.Next(10)] + " #RuanQuotes"));
 
         }
     }
